@@ -75,9 +75,9 @@ const Navbar = (props) => {
               <Button color="inherit" onClick={() => handleClick("/profile")}>
                 Profile
               </Button>
-              <Button color="inherit" >
-                <a href="http://localhost:3002/">Portfolio</a>
-              </Button>
+              {/* <Button color="inherit" >
+                <a href="https://akash-mern-portfolio.netlify.app/">Portfolio</a>
+              </Button> */}
               <Button color="inherit" onClick={() => handleClick("/logout")}>
                 Logout
               </Button>
