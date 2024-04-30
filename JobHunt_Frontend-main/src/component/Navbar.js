@@ -37,13 +37,18 @@ const Navbar = (props) => {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          <Button color="inherit" onClick={() => handleClick("/")}>GetJob</Button>
+          <Button color="inherit" onClick={() => handleClick("/")}>JOBHunt</Button>
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
             <React.Fragment>
               <Button color="inherit" onClick={() => handleClick("/home")}>
                 Home
+              </Button>
+              <Button color="inherit" onClick={() => {
+                handleClick("/meetings")
+              }}>
+                Interview
               </Button>
               <Button color="inherit" onClick={() => handleClick("/addjob")}>
                 Add Jobs

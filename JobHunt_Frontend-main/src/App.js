@@ -17,6 +17,8 @@ import AcceptedApplicants from "./component/recruiter/AcceptedApplicants";
 import RecruiterProfile from "./component/recruiter/Profile";
 import MessagePopup from "./lib/MessagePopup";
 import isAuth, { userType } from "./lib/isAuth";
+// import Meeting from "./component/MeetingContainer";
+import MeetingContainer from "./component/MeetingContainer";
 // import Portfolio from './component/candidate/Portfolio/src/pages/App';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,13 +43,18 @@ function App() {
     severity: "",
     message: "",
   });
+
+  const [isMeetingOn, setIsMeetingOn] = useState(false);
+
   return (
     <BrowserRouter>
       <SetPopupContext.Provider value={setPopup}>
         <Grid container direction="column">
-          <Grid item xs>
-            <Navbar />
-          </Grid>
+          {!isMeetingOn && (
+            <Grid item xs>
+              <Navbar />
+            </Grid>
+          )}
           <Grid item className={classes.body}>
             <Switch>
               {/* <Route exact path="/P">
@@ -67,6 +74,9 @@ function App() {
               </Route>
               <Route exact path="/home">
                 <Home />
+              </Route>
+              <Route exact path="/meetings">
+                <MeetingContainer setIsMeetingOn={setIsMeetingOn}/>
               </Route>
               <Route exact path="/applications">
                 <Applications />

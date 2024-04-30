@@ -8,7 +8,7 @@ const Welcomehome = () => (
     <React.Fragment>
         <div className="home-container">
             <div className="home-content">
-                <h1 className="home-heading">GetJob With Portfolio Maker</h1>
+                <h1 className="home-heading">Empowering Careers, Even in Uncertain Times</h1>
                 <p className="home-description">
                     Millions of people are searching for jobs, salary information, company
                     reviews. Find the job that fits your abilities and potential.
